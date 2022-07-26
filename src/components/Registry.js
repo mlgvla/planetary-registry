@@ -6,6 +6,7 @@ import PlanetList from "./PlanetList"
 function Registry() {
   const [planets, setPlanets] = useState([])
   const [search, setSearch] = useState("")
+  const [sortBy, setSortBy] = useState("")
 
   useEffect(() => {
     fetch("http://localhost:8085/planets")
@@ -16,7 +17,7 @@ function Registry() {
   function handleAddPlanet(newPlanet) {
     setPlanets([...planets, newPlanet])
   }
-console.log(planets)
+
   const planetsToDisplay = planets.filter((planet) => {
     return (
       planet.name.toLowerCase().includes(search.toLowerCase()) ||
@@ -26,11 +27,19 @@ console.log(planets)
     )
   })
 
+  const sortedPlanetsToDisplay = planetsToDisplay.sort((a, b) => {
+    if (sortBy === "") {
+      return a.id - b.id
+    } else {
+      return a[sortBy].toLowerCase().localeCompare(b[sortBy].toLowerCase())
+    }
+  })
+
   return (
     <div className="registry">
       <Search search={search} onSearchChange={setSearch} />
       <div className="content">
-        <PlanetList planets={planetsToDisplay} />
+        <PlanetList planets={sortedPlanetsToDisplay} onTableSort={setSortBy} />
         <NewPlanetForm onAddNewPlanet={handleAddPlanet} />
       </div>
     </div>
