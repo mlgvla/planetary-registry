@@ -18,20 +18,20 @@ function NewPlanetForm({ onAddNewPlanet }) {
     fetch("http://localhost:8085/planets", {
       method: "POST",
       headers: {
-        "Content-Type": "application/json",
+        "Content-Type": "application/json"
       },
-      body: JSON.stringify(formData),
+      body: JSON.stringify(formData)
     })
-      .then((res) => res.json())``
-      .then((newPlanet) => {
-        onAddNewPlanet(newPlanet)
-        setFormData({
-          name: "",
-          climate: "",
-          terrain: "",
-          population: "",
-        })
+    .then(res => res.json())
+    .then(newPlanet => {
+      onAddNewPlanet(newPlanet)
+      setFormData({
+        name: "",
+        climate: "",
+        terrain: "",
+        population: ""
       })
+    })
   }
 
   return (

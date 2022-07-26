@@ -1210,20 +1210,6 @@
       "climate": "cold",
       "terrain": "rocky",
       "population": "1"
-    },
-    {
-      "name": "Monica",
-      "climate": "Frozen",
-      "terrain": "mountains",
-      "population": "5000",
-      "id": 61
-    },
-    {
-      "name": "Bill",
-      "climate": "chilly",
-      "terrain": "bumpy",
-      "population": "23",
-      "id": 62
     }
   ]
 }

@@ -16,7 +16,7 @@ function Registry() {
   function handleAddPlanet(newPlanet) {
     setPlanets([...planets, newPlanet])
   }
-
+console.log(planets)
   const planetsToDisplay = planets.filter((planet) => {
     return (
       planet.name.toLowerCase().includes(search.toLowerCase()) ||
