@@ -40,3 +40,9 @@ As a user, I should be able to:
 - See a table of the planet names from the Star Wars universe.
 - Fill out and submit the form to add a new planet. This should add the new planet to the table **as well as post the new planet to the backend API for persistence**.
 - Filter planets by typing into the search bar. Only planets that have any field that matches the search term should be in the table.
+
+## Advanced Deliverables
+
+As a user, I should be able to:
+
+- Click on either Name, Climate, or Terrain in the table header to sort the planets by that property
