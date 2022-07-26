@@ -1217,6 +1217,13 @@
       "terrain": "soft",
       "population": "19",
       "id": 61
+    },
+    {
+      "name": "",
+      "climate": "",
+      "terrain": "",
+      "population": "",
+      "id": 62
     }
   ]
 }

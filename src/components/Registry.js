@@ -6,7 +6,7 @@ import PlanetList from "./PlanetList"
 function Registry() {
   const [planets, setPlanets] = useState([])
   const [search, setSearch] = useState("")
-  const [sortBy, setSortBy] = useState("")
+  const [sortBy, setSortBy] = useState("name")
 
   useEffect(() => {
     fetch("http://localhost:8085/planets")
@@ -28,11 +28,7 @@ function Registry() {
   })
 
   const sortedPlanetsToDisplay = planetsToDisplay.sort((a, b) => {
-    if (sortBy === "") {
-      return a.id - b.id
-    } else {
-      return a[sortBy].toLowerCase().localeCompare(b[sortBy].toLowerCase())
-    }
+    return a[sortBy].toLowerCase().localeCompare(b[sortBy].toLowerCase())
   })
 
   return (
