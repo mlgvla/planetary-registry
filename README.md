@@ -45,4 +45,4 @@ As a user, I should be able to:
 
 As a user, I should be able to:
 
-- Click on either Name, Climate, or Terrain in the table header to sort the planets by that property
+- Sort by planet name when app first loads. Click on either Name, Climate, or Terrain in the table header to sort the planets by that property.
