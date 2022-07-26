@@ -1,11 +1,17 @@
 import React from "react"
 
-function Search() {
-    return (
-        <div>
-            <input type="text" onChange={() => console.log("Searching...")} placeholder="Search..."/>
-        </div>
-    );
+function Search({ search, onSearchChange }) {
+    console.log(search)
+  return (
+    <div>
+      <input
+        type="text"
+        value={search}
+        onChange={(e) => onSearchChange(e.target.value)}
+        placeholder="Search..."
+      />
+    </div>
+  )
 }
 
-export default Search;
+export default Search
